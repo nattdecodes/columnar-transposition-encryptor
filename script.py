@@ -1,3 +1,7 @@
+
+# TODO: make configurable column sorting
+# TODO: use matrices instead
+
 def key_code(key):
     nums = []
     zipped = list(zip(key, range(1, len(key)+1)))
@@ -23,4 +27,7 @@ def encrypt(msg, key):
     decrypted = decrypted.replace("*", "")
     print(decrypted)
 
-encrypt("EXAMPLEX", "HARD") # test
+if __name__ == "__main__":
+    cipher = input("message to cipher > ")
+    key = input("key > ")
+    print(encrypt(cipher, key))
